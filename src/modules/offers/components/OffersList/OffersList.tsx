@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 export const OffersList: React.FC<OffersListProps> = props => {
 	const { offers } = props;
 
+	// TODO: Add virtual scroll to improve performance
 	return (
 		<div className={styles.list}>
 			{offers.map((offer: Offer) => <Link to={`/offers/${offer.id}`}><OffersListItem key={offer.id} className={styles.listItem} offer={offer}/></Link>)}

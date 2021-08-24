@@ -1,0 +1,5 @@
+.offer {
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+}
