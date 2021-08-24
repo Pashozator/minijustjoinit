@@ -4,7 +4,7 @@
     display: grid;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 1024px) {
     .container {
         grid-template-columns: 50% 50%;
     }
