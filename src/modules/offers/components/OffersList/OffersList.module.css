@@ -1,7 +1,9 @@
 .list {
+    height: 100%;
     padding: 20px;
     flex-direction: column;
     display: flex;
+    overflow-y: scroll;
 }
 
 .listItem:not(:last-of-type) {
