@@ -8,4 +8,6 @@ export interface Offer {
 	salary_currency: string;
 	salary_from: number;
 	salary_to: number;
+	latitude: number;
+	longitude: number;
 }

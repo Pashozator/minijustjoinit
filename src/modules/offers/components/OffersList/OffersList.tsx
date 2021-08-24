@@ -9,7 +9,7 @@ export const OffersList: React.FC<OffersListProps> = props => {
 
 	return (
 		<div className={styles.list}>
-			{offers.map((offer: Offer) => <OffersListItem className={styles.listItem} offer={offer}/>)}
+			{offers.map((offer: Offer) => <OffersListItem key={offer.id} className={styles.listItem} offer={offer}/>)}
 		</div>
 	);
 }
