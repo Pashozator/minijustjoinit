@@ -1,4 +1,9 @@
 .list {
+    padding: 20px;
     flex-direction: column;
     display: flex;
+}
+
+.listItem:not(:last-of-type) {
+    margin-bottom: 10px;
 }

@@ -1,0 +1,44 @@
+.item {
+    height: 70px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.logoContainer {
+    margin-right: 20px;
+    width: 150px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo {
+    max-width: 100%;
+    height: 100%;
+}
+
+.info {
+    flex-direction: column;
+    display: flex;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.additional {
+    margin-top: 5px;
+    color: grey;
+    font-size: 12px;
+}
+
+.additional > span:not(:last-of-type) {
+    margin-right: 10px;
+}

@@ -5,4 +5,7 @@ export interface Offer {
 	company_logo_url: string;
 	company_name: string;
 	employment_type: string;
+	salary_currency: string;
+	salary_from: number;
+	salary_to: number;
 }
