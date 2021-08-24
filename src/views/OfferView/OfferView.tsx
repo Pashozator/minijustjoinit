@@ -13,7 +13,7 @@ export const OfferView: React.FC = () => {
 
 	// TODO: Should be specific endpoint to get offer by id
 	// TODO: Add error handling
-	const getOffer = async () => {
+	const getOffer = async (id: string) => {
 		setLoading(true);
 
 		const offers: Offer[] = await api.request<Offer[]>(getOffersEndpoint())
@@ -23,7 +23,7 @@ export const OfferView: React.FC = () => {
 	}
 
 	useEffect(() => {
-		getOffer();
+		getOffer(id);
 	}, [id]);
 
 	if (loading) {
