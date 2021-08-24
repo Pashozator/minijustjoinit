@@ -11,6 +11,7 @@ export const HomePageView: React.FC = () => {
 	const [loading, setLoading] = useState<boolean>(true);
 	const [offers, setOffers] = useState<Offer[]>([]);
 
+	// TODO: Add error handling
 	const getOffers = async () => {
 		setLoading(true);
 		setOffers(await api.request<Offer[]>(getOffersEndpoint()));

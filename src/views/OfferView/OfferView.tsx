@@ -12,6 +12,7 @@ export const OfferView: React.FC = () => {
 	const { id } = useParams<{ id: string }>();
 
 	// TODO: Should be specific endpoint to get offer by id
+	// TODO: Add error handling
 	const getOffer = async () => {
 		setLoading(true);
 

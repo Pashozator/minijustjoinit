@@ -7,6 +7,7 @@ import { Offer } from '../../domain/interfaces/offer';
 export const OffersMap: React.FC<OffersMapProps> = props => {
 	const { offers } = props;
 
+	// TODO: Add layer with webgl engine to improve performance
 	return (
 		<div>
 			<MapContainer className={styles.map} center={[50.0618971, 19.9367559]} zoom={6} scrollWheelZoom={false}>
