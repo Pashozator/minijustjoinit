@@ -5,11 +5,17 @@ import { api } from '../../modules/api/api';
 import { getOffersEndpoint } from '../../modules/offers/domain/endpoints/get-offers.endpoint';
 import { OffersList } from '../../modules/offers/components/OffersList/OffersList';
 import { OffersMap } from '../../modules/offers/components/OffersMap/OffersMap';
+import { Loader } from '../../modules/shared/components/Loader/Loader';
 
 export const HomePageView: React.FC = () => {
+	const [loading, setLoading] = useState<boolean>(true);
 	const [offers, setOffers] = useState<Offer[]>([]);
 
-	const getOffers = async () => setOffers(await api.request<Offer[]>(getOffersEndpoint()));
+	const getOffers = async () => {
+		setLoading(true);
+		setOffers(await api.request<Offer[]>(getOffersEndpoint()));
+		setLoading(false);
+	}
 
 	useEffect(() => {
 		getOffers();
@@ -17,7 +23,7 @@ export const HomePageView: React.FC = () => {
 
 	return (
 		<div className={styles.container}>
-			<OffersList offers={offers}/>
+			{loading ? <Loader /> : <OffersList offers={offers}/>}
 			<OffersMap offers={offers}/>
 		</div>
 	);

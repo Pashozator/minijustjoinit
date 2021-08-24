@@ -11,7 +11,7 @@ export const OffersList: React.FC<OffersListProps> = props => {
 	// TODO: Add virtual scroll to improve performance
 	return (
 		<div className={styles.list}>
-			{offers.map((offer: Offer) => <Link to={`/offers/${offer.id}`}><OffersListItem key={offer.id} className={styles.listItem} offer={offer}/></Link>)}
+			{offers.map((offer: Offer) => <Link to={`/offers/${offer.id}`} key={offer.id} ><OffersListItem className={styles.listItem} offer={offer}/></Link>)}
 		</div>
 	);
 }

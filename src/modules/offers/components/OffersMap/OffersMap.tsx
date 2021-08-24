@@ -14,7 +14,7 @@ export const OffersMap: React.FC<OffersMapProps> = props => {
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				{offers.map((offer: Offer) => <Marker position={[offer.latitude, offer.longitude]} />)}
+				{offers.map((offer: Offer) => <Marker position={[offer.latitude, offer.longitude]} key={offer.id}/>)}
 			</MapContainer>
 		</div>
 	);
